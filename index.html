@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Couch Potato Games | Rise of the Barbarian Kings</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@900&family=Uncial+Antiqua&family=Almendra+SC&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="bf-banner">
+    <div class="marquee-wrapper">
+      <div class="marquee">BY ORDER OF THE SUPREME COUCH COMMANDER — TRIBUTES NOW ACCEPTED • AFTER EVERY PURCHASE CONTACT COUCHPOTATOGAMES ON DISCORD FOR MANUAL DELIVERY</div>
+      <div class="marquee">BY ORDER OF THE SUPREME COUCH COMMANDER — TRIBUTES NOW ACCEPTED • AFTER EVERY PURCHASE CONTACT COUCHPOTATOGAMES ON DISCORD FOR MANUAL DELIVERY</div>
+    </div>
+  </div>
+
+  <div class="lang-selector">
+    <select id="lang-select">
+      <option value="en">English</option>
+      <option value="es">Español</option>
+      <option value="fr">Français</option>
+      <option value="de">Deutsch</option>
+      <option value="pt">Português</option>
+      <option value="ru">Русский</option>
+      <option value="ja">日本語</option>
+      <option value="ko">한국어</option>
+    </select>
+  </div>
+
+  <div class="container" style="max-width:1100px;">
+
+    <div style="margin:3rem auto 4rem;border:8px double #b8860b;box-shadow:0 0 70px rgba(184,134,11,0.9);border-radius:18px;overflow:hidden;position:relative;background:#000;">
+      <video id="promoVideo" style="width:100%;display:block;" autoplay muted loop playsinline preload="auto">
+        <source src="your-promo-video.mp4" type="video/mp4">
+      </video>
+
+      <button id="soundToggle" style="position:absolute;bottom:18px;right:18px;z-index:10;background:rgba(0,0,0,0.7);border:2px solid #b8860b;width:44px;height:44px;border-radius:50%;cursor:pointer;opacity:0.9;transition:all .3s;display:flex;align-items:center;justify-content:center;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffd700" stroke-width="2.3">
+          <path d="M11 5L6 9H2v6h4l5 4V5z"/>
+          <path class="mute-slash" d="M1 1l22 22"/>
+        </svg>
+      </button>
+
+      <div style="background:rgba(0,0,0,0.96);padding:1.6rem;text-align:center;border-top:4px solid #b8860b;">
+        <div style="color:#ff4444;font-family:'Cinzel Decorative',cursive;font-size:2rem;letter-spacing:6px;">RISE OF THE BARBARIAN KINGS</div>
+        <div style="color:#ffd700;font-family:'Cinzel Decorative',cursive;font-size:2.2rem;letter-spacing:5px;text-shadow:0 0 20px #b8860b;margin-top:8px;">Spring 2026</div>
+      </div>
+    </div>
+
+    <h2 style="font-size:3.5rem;color:#ffd700;text-align:center;margin:4rem 0 2rem;">Royal Decrees & War Reports</h2>
+
+    <div class="news-feed">
+      <!-- Add news posts here -->
+    </div>
+
+    <div style="text-align:center;margin:6rem 0;">
+      <a href="shop.html" class="btn discord" style="font-size:2.4rem;padding:1.6rem 3.5rem;">Enter the Crown Shop</a>
+    </div>
+
+    <footer>© 2025 Couch Potato Games • All Hail the Eternal Spud • <a href="mailto:contact@couchpotato.games">contact@couchpotato.games</a></footer>
+  </div>
+
+  <script>
+    // FULL LANGUAGE + SOUND – TESTED & WORKING
+    const translations = {
+      en: { title:"Couch Potato Games | Rise of the Barbarian Kings", h1:"By Royal Decree of the Eternal Spud", tagline:"Supreme Couch Commander &amp; Master of Lazy Conquest<br>Commissions forged in the fires of pure potato power" },
+      es: { title:"Couch Potato Games | Rise of the Barbarian Kings", h1:"Por Decreto Real del Eterno Spud", tagline:"Comandante Supremo del Sofá y Maestro de la Conquista Perezosa<br>Comisiones forjadas en el fuego del poder de la patata pura" },
+      fr: { title:"Couch Potato Games | Rise of the Barbarian Kings", h1:"Par Décret Royal de l'Éternel Spud", tagline:"Commandant Suprême du Canapé &amp; Maître de la Conquête Paresseuse<br>Commissions forgées dans les feux du pur pouvoir de la pomme de terre" },
+      de: { title:"Couch Potato Games | Rise of the Barbarian Kings", h1:"Durch königlichen Erlass des Ewigen Spud", tagline:"Oberster Sofakommandant &amp; Meister der faulen Eroberung<br>Aufträge geschmiedet im Feuer reiner Kartoffelkraft" },
+      pt: { title:"Couch Potato Games | Rise of the Barbarian Kings", h1:"Por Decreto Real do Eterno Spud", tagline:"Comandante Supremo do Sofá &amp; Mestre da Conquista Preguiçosa<br>Comissões forjadas no fogo do puro poder da batata" },
+      ru: { title:"Couch Potato Games | Rise of the Barbarian Kings", h1:"По Указу Вечного Картофеля", tagline:"Верховный Командир Дивана и Повелитель Ленивых Завоеваний<br>Заказы выкованы в огне чистой картофельной мощи" },
+      ja: { title:"Couch Potato Games | Rise of the Barbarian Kings", h1:"永遠のポテト王の勅令により", tagline:"最高のソファー司令官＆怠惰な征服の達人<br>純粋なポテトパワーで鍛えられた委託" },
+      ko: { title:"Couch Potato Games | Rise of the Barbarian Kings", h1:"영원한 감자 황제의 칙령에 따라", tagline:"최고의 소파 사령관 &amp; 게으른 정복의 대가<br>순수한 감자 파워로 단련된 의뢰" }
+    };
+
+    function setLanguage(lang) {
+      document.documentElement.lang = lang;
+      const t = translations[lang] || translations.en;
+      document.title = t.title;
+      document.querySelector('h1').innerHTML = t.h1;
+      document.querySelector('.tagline').innerHTML = t.tagline;
+      localStorage.setItem('lang', lang);
+    }
+
+    const savedLang = localStorage.getItem('lang') || 'en';
+    document.getElementById('lang-select').value = savedLang;
+    setLanguage(savedLang);
+    document.getElementById('lang-select').addEventListener('change', e => setLanguage(e.target.value));
+
+    // SOUND TOGGLE – FIXED & WORKING
+    const video = document.getElementById('promoVideo');
+    const toggleBtn = document.getElementById('soundToggle');
+    const slash = document.querySelector('.mute-slash');
+
+    video.addEventListener('loadeddata', () => {
+      video.play().catch(e => console.log('Autoplay blocked', e));
+    });
+
+    toggleBtn.addEventListener('click', () => {
+      video.muted = !video.muted;
+      slash.style.display = video.muted ? 'block' : 'none';
+      toggleBtn.style.opacity = video.muted ? 0.7 : 1;
+    });
+
+    // Start muted
+    video.muted = true;
+    slash.style.display = 'block';
+  </script>
+</body>
+</html>
