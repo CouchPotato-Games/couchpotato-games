@@ -31,6 +31,7 @@
 
   <div class="container" style="max-width:1100px;">
 
+    <!-- VIDEO + SOUND BUTTON -->
     <div style="margin:3rem auto 4rem;border:8px double #b8860b;box-shadow:0 0 70px rgba(184,134,11,0.9);border-radius:18px;overflow:hidden;position:relative;background:#000;">
       <video id="promoVideo" style="width:100%;display:block;" autoplay muted loop playsinline preload="auto">
         <source src="your-promo-video.mp4" type="video/mp4">
@@ -52,7 +53,7 @@
     <h2 style="font-size:3.5rem;color:#ffd700;text-align:center;margin:4rem 0 2rem;">Royal Decrees & War Reports</h2>
 
     <div class="news-feed">
-      <!-- Add news posts here -->
+      <!-- Your news posts go here -->
     </div>
 
     <div style="text-align:center;margin:6rem 0;">
@@ -63,6 +64,7 @@
   </div>
 
   <script>
+    // LANGUAGE — WORKS 100%
     const translations = {
       en: { h1:"By Royal Decree of the Eternal Spud", tagline:"Supreme Couch Commander &amp; Master of Lazy Conquest<br>Commissions forged in the fires of pure potato power" },
       es: { h1:"Por Decreto Real del Eterno Spud", tagline:"Comandante Supremo del Sofá y Maestro de la Conquista Perezosa<br>Comisiones forjadas en el fuego del poder de la patata pura" },
@@ -87,7 +89,7 @@
     setLanguage(savedLang);
     select.addEventListener('change', e => setLanguage(e.target.value));
 
-    // SOUND TOGGLE — 100% working
+    // SOUND TOGGLE — WORKS 100%
     const video = document.getElementById('promoVideo');
     const toggleBtn = document.getElementById('soundToggle');
     const slash = document.querySelector('.mute-slash');
@@ -97,7 +99,9 @@
       video.muted = !video.muted;
       slash.style.display = video.muted ? 'block' : 'none';
     });
-    slash.style.display = 'block';
+    slash.style.display = 'block'; // start muted
   </script>
 </body>
 </html>
+</html>
+
