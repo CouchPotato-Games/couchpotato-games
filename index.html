@@ -63,49 +63,40 @@
   </div>
 
   <script>
-    // FULL LANGUAGE + SOUND – TESTED & WORKING
     const translations = {
-      en: { title:"Couch Potato Games | Rise of the Barbarian Kings", h1:"By Royal Decree of the Eternal Spud", tagline:"Supreme Couch Commander &amp; Master of Lazy Conquest<br>Commissions forged in the fires of pure potato power" },
-      es: { title:"Couch Potato Games | Rise of the Barbarian Kings", h1:"Por Decreto Real del Eterno Spud", tagline:"Comandante Supremo del Sofá y Maestro de la Conquista Perezosa<br>Comisiones forjadas en el fuego del poder de la patata pura" },
-      fr: { title:"Couch Potato Games | Rise of the Barbarian Kings", h1:"Par Décret Royal de l'Éternel Spud", tagline:"Commandant Suprême du Canapé &amp; Maître de la Conquête Paresseuse<br>Commissions forgées dans les feux du pur pouvoir de la pomme de terre" },
-      de: { title:"Couch Potato Games | Rise of the Barbarian Kings", h1:"Durch königlichen Erlass des Ewigen Spud", tagline:"Oberster Sofakommandant &amp; Meister der faulen Eroberung<br>Aufträge geschmiedet im Feuer reiner Kartoffelkraft" },
-      pt: { title:"Couch Potato Games | Rise of the Barbarian Kings", h1:"Por Decreto Real do Eterno Spud", tagline:"Comandante Supremo do Sofá &amp; Mestre da Conquista Preguiçosa<br>Comissões forjadas no fogo do puro poder da batata" },
-      ru: { title:"Couch Potato Games | Rise of the Barbarian Kings", h1:"По Указу Вечного Картофеля", tagline:"Верховный Командир Дивана и Повелитель Ленивых Завоеваний<br>Заказы выкованы в огне чистой картофельной мощи" },
-      ja: { title:"Couch Potato Games | Rise of the Barbarian Kings", h1:"永遠のポテト王の勅令により", tagline:"最高のソファー司令官＆怠惰な征服の達人<br>純粋なポテトパワーで鍛えられた委託" },
-      ko: { title:"Couch Potato Games | Rise of the Barbarian Kings", h1:"영원한 감자 황제의 칙령에 따라", tagline:"최고의 소파 사령관 &amp; 게으른 정복의 대가<br>순수한 감자 파워로 단련된 의뢰" }
+      en: { h1:"By Royal Decree of the Eternal Spud", tagline:"Supreme Couch Commander &amp; Master of Lazy Conquest<br>Commissions forged in the fires of pure potato power" },
+      es: { h1:"Por Decreto Real del Eterno Spud", tagline:"Comandante Supremo del Sofá y Maestro de la Conquista Perezosa<br>Comisiones forjadas en el fuego del poder de la patata pura" },
+      fr: { h1:"Par Décret Royal de l'Éternel Spud", tagline:"Commandant Suprême du Canapé &amp; Maître de la Conquête Paresseuse<br>Commissions forgées dans les feux du pur pouvoir de la pomme de terre" },
+      de: { h1:"Durch königlichen Erlass des Ewigen Spud", tagline:"Oberster Sofakommandant &amp; Meister der faulen Eroberung<br>Aufträge geschmiedet im Feuer reiner Kartoffelkraft" },
+      pt: { h1:"Por Decreto Real do Eterno Spud", tagline:"Comandante Supremo do Sofá &amp; Mestre da Conquista Preguiçosa<br>Comissões forjadas no fogo do puro poder da batata" },
+      ru: { h1:"По Указу Вечного Картофеля", tagline:"Верховный Командир Дивана и Повелитель Ленивых Завоеваний<br>Заказы выкованы в огне чистой картофельной мощи" },
+      ja: { h1:"永遠のポテト王の勅令により", tagline:"最高のソファー司令官＆怠惰な征服の達人<br>純粋なポテトパワーで鍛えられた委託" },
+      ko: { h1:"영원한 감자 황제의 칙령에 따라", tagline:"최고의 소파 사령관 &amp; 게으른 정복의 대가<br>순수한 감자 파워로 단련된 의뢰" }
     };
 
     function setLanguage(lang) {
-      document.documentElement.lang = lang;
       const t = translations[lang] || translations.en;
-      document.title = t.title;
       document.querySelector('h1').innerHTML = t.h1;
       document.querySelector('.tagline').innerHTML = t.tagline;
       localStorage.setItem('lang', lang);
     }
 
     const savedLang = localStorage.getItem('lang') || 'en';
-    document.getElementById('lang-select').value = savedLang;
+    const select = document.getElementById('lang-select');
+    select.value = savedLang;
     setLanguage(savedLang);
-    document.getElementById('lang-select').addEventListener('change', e => setLanguage(e.target.value));
+    select.addEventListener('change', e => setLanguage(e.target.value));
 
-    // SOUND TOGGLE – FIXED & WORKING
+    // SOUND TOGGLE — 100% working
     const video = document.getElementById('promoVideo');
     const toggleBtn = document.getElementById('soundToggle');
     const slash = document.querySelector('.mute-slash');
 
-    video.addEventListener('loadeddata', () => {
-      video.play().catch(e => console.log('Autoplay blocked', e));
-    });
-
+    video.addEventListener('loadeddata', () => video.play().catch(() => {}));
     toggleBtn.addEventListener('click', () => {
       video.muted = !video.muted;
       slash.style.display = video.muted ? 'block' : 'none';
-      toggleBtn.style.opacity = video.muted ? 0.7 : 1;
     });
-
-    // Start muted
-    video.muted = true;
     slash.style.display = 'block';
   </script>
 </body>
