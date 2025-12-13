@@ -10,14 +10,22 @@
 </head>
 <body>
 
+  <!-- BACK TO NEWS -->
   <div style="text-align:center;margin:2rem 0;padding:1rem;background:rgba(0,0,0,0.5);">
-    <a href="/" style="color:#ffd700;font-size:1.6rem;text-decoration:underline;">← Back to Royal News & Updates</a>
+    <a href="/" style="color:#ffd700;font-size:1.6rem;text-decoration:underline;">
+      ← Back to Royal News & Updates
+    </a>
   </div>
 
-  <div class="bf-banner">
+  <!-- SAME CHRISTMAS BANNER AS MAIN PAGE -->
+  <div class="bf-banner" style="background:linear-gradient(90deg,#004d00,#008000,#004d00);border-bottom:4px solid #ffd700;box-shadow:0 0 40px #ff0000;">
     <div class="marquee-wrapper">
-      <div class="marquee">BY ORDER OF THE SUPREME COUCH COMMANDER — TRIBUTES NOW ACCEPTED • AFTER EVERY PURCHASE CONTACT COUCHPOTATOGAMES ON DISCORD FOR MANUAL DELIVERY</div>
-      <div class="marquee">BY ORDER OF THE SUPREME COUCH COMMANDER — TRIBUTES NOW ACCEPTED • AFTER EVERY PURCHASE CONTACT COUCHPOTATOGAMES ON DISCORD FOR MANUAL DELIVERY</div>
+      <div class="marquee" style="color:#ff0000;font-family:'Cinzel Decorative',cursive;font-size:2.8rem;text-shadow:0 0 20px #ffd700;">
+        🎄 CHRISTMAS SALE LIVE — +80% MORE CROWNS ON ALL PACKS — ENDS DECEMBER 31ST 🎄
+      </div>
+      <div class="marquee" style="color:#ff0000;font-family:'Cinzel Decorative',cursive;font-size:2.8rem;text-shadow:0 0 20px #ffd700;">
+        🎄 CHRISTMAS SALE LIVE — +80% MORE CROWNS ON ALL PACKS — ENDS DECEMBER 31ST 🎄
+      </div>
     </div>
   </div>
 
@@ -76,6 +84,7 @@
 
     <footer>© 2025 Couch Potato Games • All Hail the Eternal Spud • <a href="mailto:contact@couchpotato.games">contact@couchpotato.games</a></footer>
 
+    <!-- MODAL & TOAST -->
     <div id="modal" class="modal">
       <div class="modal-content">
         <span class="close">×</span>
@@ -94,7 +103,8 @@
     // LANGUAGE
     const translations = {
       en: { h1:"By Royal Decree of the Eternal Spud", tagline:"Supreme Couch Commander &amp; Master of Lazy Conquest<br>Commissions forged in the fires of pure potato power", crown:"Christmas Sale Crown Packs (+80% Bonus!)", tribute:"Present Your Tribute", discord:"Join the Royal Court on Discord", note:"After payment join Discord and open a ticket with CouchPotatoGames", copy:"Copy", copied:"Address copied!" },
-      // add other languages if needed
+      es: { /* your Spanish translations if needed */ },
+      // (add other languages if you want, or leave as English default)
     };
 
     function setLanguage(lang) {
