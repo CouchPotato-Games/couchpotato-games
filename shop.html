@@ -10,14 +10,10 @@
 </head>
 <body>
 
-  <!-- BACK TO NEWS -->
   <div style="text-align:center;margin:2rem 0;padding:1rem;background:rgba(0,0,0,0.5);">
-    <a href="/" style="color:#ffd700;font-size:1.6rem;text-decoration:underline;">
-      ← Back to Royal News & Updates
-    </a>
+    <a href="/" style="color:#ffd700;font-size:1.6rem;text-decoration:underline;">← Back to Royal News & Updates</a>
   </div>
 
-  <!-- ROYAL BANNER -->
   <div class="bf-banner">
     <div class="marquee-wrapper">
       <div class="marquee">BY ORDER OF THE SUPREME COUCH COMMANDER — TRIBUTES NOW ACCEPTED • AFTER EVERY PURCHASE CONTACT COUCHPOTATOGAMES ON DISCORD FOR MANUAL DELIVERY</div>
@@ -41,37 +37,31 @@
   <div class="container">
     <img src="logo.png" alt="Couch Potato Games" class="logo">
 
-    <h1 data-en="By Royal Decree of the Eternal Spud">By Royal Decree of the Eternal Spud</h1>
+    <h1>By Royal Decree of the Eternal Spud</h1>
 
-    <p class="tagline" data-en="Supreme Couch Commander &amp; Master of Lazy Conquest<br>Commissions forged in the fires of pure potato power">
+    <p class="tagline">
       Supreme Couch Commander &amp; Master of Lazy Conquest<br>Commissions forged in the fires of pure potato power
     </p>
 
-    <!-- CROWN PACKS -->
+    <!-- CHRISTMAS SALE CROWN PACKS (+80%) -->
     <div class="scroll">
-      <h2 data-en="Crown Packs">Crown Packs</h2>
+      <h2>Christmas Sale Crown Packs (+80% Bonus!)</h2>
       <div class="crown-list">
-        <div>300 Crowns     <span>$7.99</span></div>
-        <div>500 Crowns     <span>$12.99</span></div>
-        <div>1,000 Crowns   <span>$22.99</span></div>
-        <div>2,000 Crowns   <span>$44.99</span></div>
-        <div>4,500 Crowns   <span>$84.99</span></div>
-        <div>7,000 Crowns   <span>$129.99</span></div>
-        <div>12,000 Crowns  <span>$199.99</span></div>
+        <div>540 Crowns (was 300)     <span>$7.99</span></div>
+        <div>900 Crowns (was 500)     <span>$12.99</span></div>
+        <div>1,800 Crowns (was 1,000)   <span>$22.99</span></div>
+        <div>3,600 Crowns (was 2,000)   <span>$44.99</span></div>
+        <div>8,100 Crowns (was 4,500)   <span>$84.99</span></div>
+        <div>12,600 Crowns (was 7,000)   <span>$129.99</span></div>
+        <div>21,600 Crowns (was 12,000)  <span>$199.99</span></div>
       </div>
-      <p class="note" data-en="After payment join Discord and open a ticket with CouchPotatoGames">
-        After payment join Discord and open a ticket with CouchPotatoGames
-      </p>
+      <p class="note">After payment join Discord and open a ticket with CouchPotatoGames</p>
     </div>
 
     <!-- PAYMENTS -->
     <div class="payments">
-      <h2 data-en="Present Your Tribute">Present Your Tribute</h2>
-
-      <!-- GOLD PAYPAL BUTTON -->
-      <div class="btn paypal">
-        <div id="paypal-button-container"></div>
-      </div>
+      <h2>Present Your Tribute</h2>
+      <div class="btn paypal"><div id="paypal-button-container"></div></div>
 
       <div class="crypto-buttons">
         <button class="btn crypto btc" data-name="Bitcoin (BTC)" data-addr="bc1qprr6p8adykeqcnv8r58qx26fc6lvnrcpz3sumy">Bitcoin (BTC)</button>
@@ -80,45 +70,34 @@
       </div>
 
       <a href="https://discord.gg/couchpotatogames" target="_blank" class="btn discord">
-        <span data-en="Join the Royal Court on Discord">Join the Royal Court on Discord</span>
+        <span>Join the Royal Court on Discord</span>
       </a>
     </div>
 
-    <footer data-en="© 2025 Couch Potato Games • All Hail the Eternal Spud">
-      © 2025 Couch Potato Games • All Hail the Eternal Spud • 
-      <a href="mailto:contact@couchpotato.games">contact@couchpotato.games</a>
-    </footer>
+    <footer>© 2025 Couch Potato Games • All Hail the Eternal Spud • <a href="mailto:contact@couchpotato.games">contact@couchpotato.games</a></footer>
 
-    <!-- MODAL & TOAST -->
     <div id="modal" class="modal">
       <div class="modal-content">
         <span class="close">×</span>
-        <h3 data-en="Copy Address">Copy Address</h3>
+        <h3>Copy Address</h3>
         <p id="crypto-name"></p>
         <div class="address-box">
           <input type="text" id="addr" readonly>
-          <button id="copy-btn" data-en="Copy">Copy</button>
+          <button id="copy-btn">Copy</button>
         </div>
       </div>
     </div>
-    <div id="toast" data-en="Address copied!">Address copied!</div>
+    <div id="toast">Address copied!</div>
   </div>
 
   <script>
-    // WORKING LANGUAGE SYSTEM
+    // LANGUAGE
     const translations = {
-      en: { h1:"By Royal Decree of the Eternal Spud", tagline:"Supreme Couch Commander &amp; Master of Lazy Conquest<br>Commissions forged in the fires of pure potato power", crown:"Crown Packs", tribute:"Present Your Tribute", discord:"Join the Royal Court on Discord", note:"After payment join Discord and open a ticket with CouchPotatoGames", copy:"Copy", copied:"Address copied!" },
-      es: { h1:"Por Decreto Real del Eterno Spud", tagline:"Comandante Supremo del Sofá y Maestro de la Conquista Perezosa<br>Comisiones forjadas en el fuego del poder de la patata pura", crown:"Paquetes de Coronas", tribute:"Presenta tu Tributo", discord:"Únete a la Corte Real en Discord", note:"Tras el pago únete al Discord y abre un ticket con CouchPotatoGames", copy:"Copiar", copied:"¡Dirección copiada!" },
-      fr: { h1:"Par Décret Royal de l'Éternel Spud", tagline:"Commandant Suprême du Canapé &amp; Maître de la Conquête Paresseuse<br>Commissions forgées dans les feux du pur pouvoir de la pomme de terre", crown:"Packs de Couronnes", tribute:"Présentez Votre Tribut", discord:"Rejoignez la Cour Royale sur Discord", note:"Après paiement rejoignez Discord et ouvrez un ticket avec CouchPotatoGames", copy:"Copier", copied:"Adresse copiée!" },
-      de: { h1:"Durch königlichen Erlass des Ewigen Spud", tagline:"Oberster Sofakommandant &amp; Meister der faulen Eroberung<br>Aufträge geschmiedet im Feuer reiner Kartoffelkraft", crown:"Kronen-Pakete", tribute:"Bringt Euer Tribut", discord:"Tritt dem königlichen Hof auf Discord bei", note:"Nach Zahlung Discord beitreten und ein Ticket bei CouchPotatoGames öffnen", copy:"Kopieren", copied:"Adresse kopiert!" },
-      pt: { h1:"Por Decreto Real do Eterno Spud", tagline:"Comandante Supremo do Sofá &amp; Mestre da Conquista Preguiçosa<br>Comissões forjadas no fogo do puro poder da batata", crown:"Pacotes de Coroas", tribute:"Apresente seu Tributo", discord:"Junte-se à Corte Real no Discord", note:"Após pagamento entre no Discord e abra um ticket com CouchPotatoGames", copy:"Copiar", copied:"Endereço copiado!" },
-      ru: { h1:"По Указу Вечного Картофеля", tagline:"Верховный Командир Дивана и Повелитель Ленивых Завоеваний<br>Заказы выкованы в огне чистой картофельной мощи", crown:"Паки Корон", tribute:"Принесите Дань", discord:"Присоединяйся к Королевскому Двору в Discord", note:"После оплаты зайдите в Discord и создайте тикет CouchPotatoGames", copy:"Копировать", copied:"Адрес скопирован!" },
-      ja: { h1:"永遠のポテト王の勅令により", tagline:"最高のソファー司令官＆怠惰な征服の達人<br>純粋なポテトパワーで鍛えられた委託", crown:"クラウンパック", tribute:"貢物を捧げよ", discord:"Discordの王宮へ参内せよ", note:"支払い後にDiscordに参加してCouchPotatoGamesまでチケット作成", copy:"コピー", copied:"アドレスをコピーしました" },
-      ko: { h1:"영원한 감자 황제의 칙령에 따라", tagline:"최고의 소파 사령관 &amp; 게으른 정복의 대가<br>순수한 감자 파워로 단련된 의뢰", crown:"크라운 팩", tribute:"공물을 바치세요", discord:"디스코드 왕실에 입장하세요", note:"결제 후 디스코드에 참여하여 CouchPotatoGames 티켓 생성", copy:"복사", copied:"주소가 복사되었습니다!" }
+      en: { h1:"By Royal Decree of the Eternal Spud", tagline:"Supreme Couch Commander &amp; Master of Lazy Conquest<br>Commissions forged in the fires of pure potato power", crown:"Christmas Sale Crown Packs (+80% Bonus!)", tribute:"Present Your Tribute", discord:"Join the Royal Court on Discord", note:"After payment join Discord and open a ticket with CouchPotatoGames", copy:"Copy", copied:"Address copied!" },
+      // add other languages if needed
     };
 
     function setLanguage(lang) {
-      document.documentElement.lang = lang;
       const t = translations[lang] || translations.en;
       document.querySelector('h1').innerHTML = t.h1;
       document.querySelector('.tagline').innerHTML = t.tagline;
@@ -135,20 +114,20 @@
     setLanguage(savedLang);
     document.getElementById('lang-select').addEventListener('change', e => setLanguage(e.target.value));
 
-    // PAYPAL – GOLD BUTTON FULLY WORKING
+    // PAYPAL — +80% CROWNS
     paypal.Buttons({
-      style: { shape: 'rect', color: 'gold', layout: 'vertical', label: 'paypal' },
+      style: {shape:'rect',color:'gold',layout:'vertical',label:'paypal'},
       createOrder: (data, actions) => {
-        const prices = {"7.99":"300","12.99":"500","22.99":"1,000","44.99":"2,000","84.99":"4,500","129.99":"7,000","199.99":"12,000"};
-        let amount = prompt("Choose your Crown package:\n\n$7.99 → 300\n$12.99 → 500\n$22.99 → 1,000\n$44.99 → 2,000\n$84.99 → 4,500\n$129.99 → 7,000\n$199.99 → 12,000 Crowns\n\nEnter amount:", "7.99");
+        const prices = {"7.99":"540","12.99":"900","22.99":"1,800","44.99":"3,600","84.99":"8,100","129.99":"12,600","199.99":"21,600"};
+        let amount = prompt("CHRISTMAS SALE — +80% MORE CROWNS!\n\n$7.99 → 540\n$12.99 → 900\n$22.99 → 1,800\n$44.99 → 3,600\n$84.99 → 8,100\n$129.99 → 12,600\n$199.99 → 21,600 Crowns\n\nEnter amount:", "7.99");
         if (!amount) amount = "7.99";
         const clean = parseFloat(amount).toFixed(2);
-        return actions.order.create({ purchase_units: [{ amount: { value: clean }, description: (prices[clean]||"Custom")+" Crowns" }] });
+        return actions.order.create({purchase_units:[{amount:{value:clean},description:(prices[clean]||"Custom")+" Crowns (Christmas Sale)"}]});
       },
       onApprove: () => alert("Payment received! Join Discord → open a ticket with CouchPotatoGames to get your crowns!")
     }).render('#paypal-button-container');
 
-    // CRYPTO MODAL – FULLY WORKING
+    // CRYPTO MODAL
     const modal = document.getElementById('modal');
     const cryptoName = document.getElementById('crypto-name');
     const addrInput = document.getElementById('addr');
