@@ -10,14 +10,13 @@
 </head>
 <body>
 
-  <!-- BACK TO NEWS -->
   <div style="text-align:center;margin:2rem 0;padding:1rem;background:rgba(0,0,0,0.5);">
     <a href="/" style="color:#ffd700;font-size:1.6rem;text-decoration:underline;">
       ← Back to Royal News & Updates
     </a>
   </div>
 
-  <!-- SAME CHRISTMAS BANNER AS MAIN PAGE -->
+  <!-- CHRISTMAS BANNER -->
   <div class="bf-banner" style="background:linear-gradient(90deg,#004d00,#008000,#004d00);border-bottom:4px solid #ffd700;box-shadow:0 0 40px #ff0000;">
     <div class="marquee-wrapper">
       <div class="marquee" style="color:#ff0000;font-family:'Cinzel Decorative',cursive;font-size:2.8rem;text-shadow:0 0 20px #ffd700;">
@@ -29,18 +28,7 @@
     </div>
   </div>
 
-  <div class="lang-selector">
-    <select id="lang-select">
-      <option value="en">English</option>
-      <option value="es">Español</option>
-      <option value="fr">Français</option>
-      <option value="de">Deutsch</option>
-      <option value="pt">Português</option>
-      <option value="ru">Русский</option>
-      <option value="ja">日本語</option>
-      <option value="ko">한국어</option>
-    </select>
-  </div>
+  <!-- LANGUAGE SELECTOR REMOVED -->
 
   <div class="container">
     <img src="logo.png" alt="Couch Potato Games" class="logo">
@@ -51,7 +39,6 @@
       Supreme Couch Commander &amp; Master of Lazy Conquest<br>Commissions forged in the fires of pure potato power
     </p>
 
-    <!-- CHRISTMAS SALE CROWN PACKS (+80%) -->
     <div class="scroll">
       <h2>Christmas Sale Crown Packs (+80% Bonus!)</h2>
       <div class="crown-list">
@@ -63,10 +50,9 @@
         <div>12,600 Crowns (was 7,000)   <span>$129.99</span></div>
         <div>21,600 Crowns (was 12,000)  <span>$199.99</span></div>
       </div>
-      <p class="note">After payment join Discord and contact CouchPotatoGames</p>
+      <p class="note">After payment join Discord and open a ticket with CouchPotatoGames</p>
     </div>
 
-    <!-- PAYMENTS -->
     <div class="payments">
       <h2>Present Your Tribute</h2>
       <div class="btn paypal"><div id="paypal-button-container"></div></div>
@@ -84,7 +70,6 @@
 
     <footer>© 2025 Couch Potato Games • All Hail the Eternal Spud • <a href="mailto:contact@couchpotato.games">contact@couchpotato.games</a></footer>
 
-    <!-- MODAL & TOAST -->
     <div id="modal" class="modal">
       <div class="modal-content">
         <span class="close">×</span>
@@ -100,31 +85,7 @@
   </div>
 
   <script>
-    // LANGUAGE
-    const translations = {
-      en: { h1:"By Royal Decree of the Eternal Spud", tagline:"Supreme Couch Commander &amp; Master of Lazy Conquest<br>Commissions forged in the fires of pure potato power", crown:"Christmas Sale Crown Packs (+80% Bonus!)", tribute:"Present Your Tribute", discord:"Join the Royal Court on Discord", note:"After payment join Discord and open a ticket with CouchPotatoGames", copy:"Copy", copied:"Address copied!" },
-      es: { /* your Spanish translations if needed */ },
-      // (add other languages if you want, or leave as English default)
-    };
-
-    function setLanguage(lang) {
-      const t = translations[lang] || translations.en;
-      document.querySelector('h1').innerHTML = t.h1;
-      document.querySelector('.tagline').innerHTML = t.tagline;
-      document.querySelector('.scroll h2').innerHTML = t.crown;
-      document.querySelector('.payments h2').innerHTML = t.tribute;
-      document.querySelector('.discord span').innerHTML = t.discord;
-      document.querySelector('.note').innerHTML = t.note;
-      document.querySelector('#copy-btn').innerHTML = t.copy;
-      localStorage.setItem('lang', lang);
-    }
-
-    const savedLang = localStorage.getItem('lang') || 'en';
-    document.getElementById('lang-select').value = savedLang;
-    setLanguage(savedLang);
-    document.getElementById('lang-select').addEventListener('change', e => setLanguage(e.target.value));
-
-    // PAYPAL — +80% CROWNS
+    // PayPal + Crypto modal (no language script)
     paypal.Buttons({
       style: {shape:'rect',color:'gold',layout:'vertical',label:'paypal'},
       createOrder: (data, actions) => {
@@ -137,7 +98,6 @@
       onApprove: () => alert("Payment received! Join Discord → open a ticket with CouchPotatoGames to get your crowns!")
     }).render('#paypal-button-container');
 
-    // CRYPTO MODAL
     const modal = document.getElementById('modal');
     const cryptoName = document.getElementById('crypto-name');
     const addrInput = document.getElementById('addr');
@@ -162,6 +122,7 @@
   </script>
 </body>
 </html>
+
 
 
 
