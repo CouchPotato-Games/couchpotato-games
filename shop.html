@@ -37,17 +37,17 @@
       Supreme Couch Commander &amp; Master of Lazy Conquest<br>Commissions forged in the fires of pure potato power
     </p>
 
-    <!-- CHRISTMAS BUNDLES -->
+    <!-- CHRISTMAS BUNDLES — bundle names in alternating red/green -->
     <div class="scroll">
       <h2 style="color:#ff0000;text-align:center;">Christmas Sale Bundles</h2>
       <div class="crown-list" style="font-size:1.8rem;">
-        <div><strong>Festive Starter Bundle</strong><br>540 Crowns + 10 Random Packs + 500 Card Points     <span>$8</span></div>
-        <div><strong>Holiday Warrior Bundle</strong><br>900 Crowns + 20 Random Packs + 750 Card Points     <span>$13</span></div>
-        <div><strong>Super Festive Bundle</strong><br>1,800 Crowns + 10 Super Random Packs + 1,000 Card Points     <span>$23</span></div>
-        <div><strong>Epic Holiday Bundle</strong><br>3,600 Crowns + 20 Super Random Packs + 2,000 Card Points     <span>$45</span></div>
-        <div><strong>Ultimate Festive Bundle</strong><br>8,100 Crowns + 20 Ultimate Random Packs + 2,500 Card Points     <span>$85</span></div>
-        <div><strong>Legendary Holiday Bundle</strong><br>12,600 Crowns + 50 Ultimate Random Packs + 5,000 Card Points     <span>$130</span></div>
-        <div><strong>Supreme Barbarian Bundle</strong><br>21,600 Crowns + 50 Ultimate Random Packs + 50 Ultimate Army Packs + 10,000 Card Points     <span>$200</span></div>
+        <div><strong style="color:#ff0000;">Festive Starter Bundle</strong><br>540 Crowns + 10 Random Packs + 500 Card Points     <span>$8</span></div>
+        <div><strong style="color:#00aa00;">Holiday Warrior Bundle</strong><br>900 Crowns + 20 Random Packs + 750 Card Points     <span>$13</span></div>
+        <div><strong style="color:#ff0000;">Super Festive Bundle</strong><br>1,800 Crowns + 10 Super Random Packs + 1,000 Card Points     <span>$23</span></div>
+        <div><strong style="color:#00aa00;">Epic Holiday Bundle</strong><br>3,600 Crowns + 20 Super Random Packs + 2,000 Card Points     <span>$45</span></div>
+        <div><strong style="color:#ff0000;">Ultimate Festive Bundle</strong><br>8,100 Crowns + 20 Ultimate Random Packs + 2,500 Card Points     <span>$85</span></div>
+        <div><strong style="color:#00aa00;">Legendary Holiday Bundle</strong><br>12,600 Crowns + 50 Ultimate Random Packs + 5,000 Card Points     <span>$130</span></div>
+        <div><strong style="color:#ff0000;">Supreme Barbarian Bundle</strong><br>21,600 Crowns + 50 Ultimate Random Packs + 50 Ultimate Army Packs + 10,000 Card Points     <span>$200</span></div>
       </div>
       <p class="note" style="color:#ff0000;font-size:1.6rem;text-align:center;">Limited time — ends December 24th!</p>
     </div>
@@ -86,15 +86,15 @@
   </div>
 
   <script>
-    // PayPal — updated for new bundles
+    // PayPal — updated for bundles
     paypal.Buttons({
       style: {shape:'rect',color:'gold',layout:'vertical',label:'paypal'},
       createOrder: (data, actions) => {
-        const prices = {"8":"Festive Starter","13":"Holiday Warrior","23":"Super Festive","45":"Epic Holiday","85":"Ultimate Festive","130":"Legendary Holiday","200":"Supreme Barbarian"};
+        const prices = {"8":"Festive Starter Bundle","13":"Holiday Warrior Bundle","23":"Super Festive Bundle","45":"Epic Holiday Bundle","85":"Ultimate Festive Bundle","130":"Legendary Holiday Bundle","200":"Supreme Barbarian Bundle"};
         let amount = prompt("CHRISTMAS SALE BUNDLES\n\n$8 — Festive Starter\n$13 — Holiday Warrior\n$23 — Super Festive\n$45 — Epic Holiday\n$85 — Ultimate Festive\n$130 — Legendary Holiday\n$200 — Supreme Barbarian\n\nEnter amount:", "8");
         if (!amount) amount = "8";
         const clean = parseFloat(amount).toFixed(0);
-        return actions.order.create({purchase_units:[{amount:{value:clean},description:(prices[clean]||"Bundle")+" (Christmas Sale)"}]});
+        return actions.order.create({purchase_units:[{amount:{value:clean},description:prices[clean]+" (Christmas Sale)"}]});
       },
       onApprove: () => alert("Payment received! Join Discord → open a ticket with CouchPotatoGames to get your bundle!")
     }).render('#paypal-button-container');
@@ -124,6 +124,7 @@
   </script>
 </body>
 </html>
+
 
 
 
