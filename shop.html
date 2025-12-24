@@ -20,10 +20,10 @@
   <div class="bf-banner" style="background:linear-gradient(90deg,#004d00,#008000,#004d00);border-bottom:4px solid #ffd700;box-shadow:0 0 40px #ff0000;">
     <div class="marquee-wrapper">
       <div class="marquee" style="color:#ff0000;font-family:'Cinzel Decorative',cursive;font-size:2.8rem;text-shadow:0 0 20px #ffd700;">
-        🎄 CHRISTMAS SALE LIVE — +80% MORE CROWNS ON ALL PACKS — ENDS DECEMBER 24TH 🎄
+        🎄 CHRISTMAS SALE LIVE — MASSIVE BUNDLES — ENDS DECEMBER 24TH 🎄
       </div>
       <div class="marquee" style="color:#ff0000;font-family:'Cinzel Decorative',cursive;font-size:2.8rem;text-shadow:0 0 20px #ffd700;">
-        🎄 CHRISTMAS SALE LIVE — +80% MORE CROWNS ON ALL PACKS — ENDS DECEMBER 24TH 🎄
+        🎄 CHRISTMAS SALE LIVE — MASSIVE BUNDLES — ENDS DECEMBER 24TH 🎄
       </div>
     </div>
   </div>
@@ -37,19 +37,19 @@
       Supreme Couch Commander &amp; Master of Lazy Conquest<br>Commissions forged in the fires of pure potato power
     </p>
 
-    <!-- CHRISTMAS SALE CROWN PACKS — rounded up prices -->
+    <!-- CHRISTMAS BUNDLES -->
     <div class="scroll">
-      <h2>Christmas Sale Crown Packs (+80% Bonus!)</h2>
-      <div class="crown-list">
-        <div><span style="text-decoration:line-through red;color:#ff6666;">300</span> → <strong>540 Crowns</strong>     <span>$8</span></div>
-        <div><span style="text-decoration:line-through red;color:#ff6666;">500</span> → <strong>900 Crowns</strong>     <span>$13</span></div>
-        <div><span style="text-decoration:line-through red;color:#ff6666;">1,000</span> → <strong>1,800 Crowns</strong>   <span>$23</span></div>
-        <div><span style="text-decoration:line-through red;color:#ff6666;">2,000</span> → <strong>3,600 Crowns</strong>   <span>$45</span></div>
-        <div><span style="text-decoration:line-through red;color:#ff6666;">4,500</span> → <strong>8,100 Crowns</strong>   <span>$85</span></div>
-        <div><span style="text-decoration:line-through red;color:#ff6666;">7,000</span> → <strong>12,600 Crowns</strong>   <span>$130</span></div>
-        <div><span style="text-decoration:line-through red;color:#ff6666;">12,000</span> → <strong>21,600 Crowns</strong>  <span>$200</span></div>
+      <h2 style="color:#ff0000;text-align:center;">Christmas Sale Bundles</h2>
+      <div class="crown-list" style="font-size:1.8rem;">
+        <div><strong>Festive Starter Bundle</strong><br>540 Crowns + 10 Random Packs + 500 Card Points     <span>$8</span></div>
+        <div><strong>Holiday Warrior Bundle</strong><br>900 Crowns + 20 Random Packs + 750 Card Points     <span>$13</span></div>
+        <div><strong>Super Festive Bundle</strong><br>1,800 Crowns + 10 Super Random Packs + 1,000 Card Points     <span>$23</span></div>
+        <div><strong>Epic Holiday Bundle</strong><br>3,600 Crowns + 20 Super Random Packs + 2,000 Card Points     <span>$45</span></div>
+        <div><strong>Ultimate Festive Bundle</strong><br>8,100 Crowns + 20 Ultimate Random Packs + 2,500 Card Points     <span>$85</span></div>
+        <div><strong>Legendary Holiday Bundle</strong><br>12,600 Crowns + 50 Ultimate Random Packs + 5,000 Card Points     <span>$130</span></div>
+        <div><strong>Supreme Barbarian Bundle</strong><br>21,600 Crowns + 50 Ultimate Random Packs + 50 Ultimate Army Packs + 10,000 Card Points     <span>$200</span></div>
       </div>
-      <p class="note">After payment join Discord and open a ticket with CouchPotatoGames</p>
+      <p class="note" style="color:#ff0000;font-size:1.6rem;text-align:center;">Limited time — ends December 24th!</p>
     </div>
 
     <!-- PAYMENTS -->
@@ -86,17 +86,17 @@
   </div>
 
   <script>
-    // PayPal — updated rounded prices
+    // PayPal — updated for new bundles
     paypal.Buttons({
       style: {shape:'rect',color:'gold',layout:'vertical',label:'paypal'},
       createOrder: (data, actions) => {
-        const prices = {"8":"540","13":"900","23":"1,800","45":"3,600","85":"8,100","130":"12,600","200":"21,600"};
-        let amount = prompt("CHRISTMAS SALE — +80% MORE CROWNS!\n\n$8 → 540\n$13 → 900\n$23 → 1,800\n$45 → 3,600\n$85 → 8,100\n$130 → 12,600\n$200 → 21,600 Crowns\n\nEnter amount:", "8");
+        const prices = {"8":"Festive Starter","13":"Holiday Warrior","23":"Super Festive","45":"Epic Holiday","85":"Ultimate Festive","130":"Legendary Holiday","200":"Supreme Barbarian"};
+        let amount = prompt("CHRISTMAS SALE BUNDLES\n\n$8 — Festive Starter\n$13 — Holiday Warrior\n$23 — Super Festive\n$45 — Epic Holiday\n$85 — Ultimate Festive\n$130 — Legendary Holiday\n$200 — Supreme Barbarian\n\nEnter amount:", "8");
         if (!amount) amount = "8";
         const clean = parseFloat(amount).toFixed(0);
-        return actions.order.create({purchase_units:[{amount:{value:clean},description:(prices[clean]||"Custom")+" Crowns (Christmas Sale)"}]});
+        return actions.order.create({purchase_units:[{amount:{value:clean},description:(prices[clean]||"Bundle")+" (Christmas Sale)"}]});
       },
-      onApprove: () => alert("Payment received! Join Discord → open a ticket with CouchPotatoGames to get your crowns!")
+      onApprove: () => alert("Payment received! Join Discord → open a ticket with CouchPotatoGames to get your bundle!")
     }).render('#paypal-button-container');
 
     // Crypto modal
@@ -124,6 +124,7 @@
   </script>
 </body>
 </html>
+
 
 
 
