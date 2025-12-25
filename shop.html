@@ -16,15 +16,11 @@
     </a>
   </div>
 
-  <!-- CHRISTMAS BANNER -->
-  <div class="bf-banner" style="background:linear-gradient(90deg,#004d00,#008000,#004d00);border-bottom:4px solid #ffd700;box-shadow:0 0 40px #ff0000;">
+  <!-- ORIGINAL ROYAL BANNER (no Christmas) -->
+  <div class="bf-banner">
     <div class="marquee-wrapper">
-      <div class="marquee" style="color:#ff0000;font-family:'Cinzel Decorative',cursive;font-size:2.8rem;text-shadow:0 0 20px #ffd700;">
-        🎄 CHRISTMAS SALE LIVE — MASSIVE BUNDLES — ENDS DECEMBER 24TH 🎄
-      </div>
-      <div class="marquee" style="color:#ff0000;font-family:'Cinzel Decorative',cursive;font-size:2.8rem;text-shadow:0 0 20px #ffd700;">
-        🎄 CHRISTMAS SALE LIVE — MASSIVE BUNDLES — ENDS DECEMBER 24TH 🎄
-      </div>
+      <div class="marquee">BY ORDER OF THE SUPREME COUCH COMMANDER — TRIBUTES NOW ACCEPTED • AFTER EVERY PURCHASE CONTACT COUCHPOTATOGAMES ON DISCORD FOR MANUAL DELIVERY</div>
+      <div class="marquee">BY ORDER OF THE SUPREME COUCH COMMANDER — TRIBUTES NOW ACCEPTED • AFTER EVERY PURCHASE CONTACT COUCHPOTATOGAMES ON DISCORD FOR MANUAL DELIVERY</div>
     </div>
   </div>
 
@@ -37,19 +33,19 @@
       Supreme Couch Commander &amp; Master of Lazy Conquest<br>Commissions forged in the fires of pure potato power
     </p>
 
-    <!-- CHRISTMAS BUNDLES — bundle names in alternating red/green -->
+    <!-- ORIGINAL CROWN PACKS -->
     <div class="scroll">
-      <h2 style="color:#ff0000;text-align:center;">Christmas Sale Bundles</h2>
-      <div class="crown-list" style="font-size:1.8rem;">
-        <div><strong style="color:#ff0000;">Festive Starter Bundle</strong><br>540 Crowns + 10 Random Packs + 500 Card Points     <span>$8</span></div>
-        <div><strong style="color:#00aa00;">Holiday Warrior Bundle</strong><br>900 Crowns + 20 Random Packs + 750 Card Points     <span>$13</span></div>
-        <div><strong style="color:#ff0000;">Super Festive Bundle</strong><br>1,800 Crowns + 10 Super Random Packs + 1,000 Card Points     <span>$23</span></div>
-        <div><strong style="color:#00aa00;">Epic Holiday Bundle</strong><br>3,600 Crowns + 20 Super Random Packs + 2,000 Card Points     <span>$45</span></div>
-        <div><strong style="color:#ff0000;">Ultimate Festive Bundle</strong><br>8,100 Crowns + 20 Ultimate Random Packs + 2,500 Card Points     <span>$85</span></div>
-        <div><strong style="color:#00aa00;">Legendary Holiday Bundle</strong><br>12,600 Crowns + 50 Ultimate Random Packs + 5,000 Card Points     <span>$130</span></div>
-        <div><strong style="color:#ff0000;">Supreme Barbarian Bundle</strong><br>21,600 Crowns + 50 Ultimate Random Packs + 50 Ultimate Army Packs + 10,000 Card Points     <span>$200</span></div>
+      <h2>Crown Packs</h2>
+      <div class="crown-list">
+        <div>300 Crowns     <span>$7.99</span></div>
+        <div>500 Crowns     <span>$12.99</span></div>
+        <div>1,000 Crowns   <span>$22.99</span></div>
+        <div>2,000 Crowns   <span>$44.99</span></div>
+        <div>4,500 Crowns   <span>$84.99</span></div>
+        <div>7,000 Crowns   <span>$129.99</span></div>
+        <div>12,000 Crowns  <span>$199.99</span></div>
       </div>
-      <p class="note" style="color:#ff0000;font-size:1.6rem;text-align:center;">Limited time — ends December 24th!</p>
+      <p class="note">After payment join Discord and open a ticket with CouchPotatoGames</p>
     </div>
 
     <!-- PAYMENTS -->
@@ -86,17 +82,17 @@
   </div>
 
   <script>
-    // PayPal — updated for bundles
+    // PayPal — back to normal prices
     paypal.Buttons({
       style: {shape:'rect',color:'gold',layout:'vertical',label:'paypal'},
       createOrder: (data, actions) => {
-        const prices = {"8":"Festive Starter Bundle","13":"Holiday Warrior Bundle","23":"Super Festive Bundle","45":"Epic Holiday Bundle","85":"Ultimate Festive Bundle","130":"Legendary Holiday Bundle","200":"Supreme Barbarian Bundle"};
-        let amount = prompt("CHRISTMAS SALE BUNDLES\n\n$8 — Festive Starter\n$13 — Holiday Warrior\n$23 — Super Festive\n$45 — Epic Holiday\n$85 — Ultimate Festive\n$130 — Legendary Holiday\n$200 — Supreme Barbarian\n\nEnter amount:", "8");
-        if (!amount) amount = "8";
-        const clean = parseFloat(amount).toFixed(0);
-        return actions.order.create({purchase_units:[{amount:{value:clean},description:prices[clean]+" (Christmas Sale)"}]});
+        const prices = {"7.99":"300","12.99":"500","22.99":"1,000","44.99":"2,000","84.99":"4,500","129.99":"7,000","199.99":"12,000"};
+        let amount = prompt("Choose your Crown package:\n\n$7.99 → 300\n$12.99 → 500\n$22.99 → 1,000\n$44.99 → 2,000\n$84.99 → 4,500\n$129.99 → 7,000\n$199.99 → 12,000 Crowns\n\nEnter amount:", "7.99");
+        if (!amount) amount = "7.99";
+        const clean = parseFloat(amount).toFixed(2);
+        return actions.order.create({purchase_units:[{amount:{value:clean},description:(prices[clean]||"Custom")+" Crowns"}]});
       },
-      onApprove: () => alert("Payment received! Join Discord → open a ticket with CouchPotatoGames to get your bundle!")
+      onApprove: () => alert("Payment received! Join Discord → open a ticket with CouchPotatoGames to get your crowns!")
     }).render('#paypal-button-container');
 
     // Crypto modal
@@ -124,6 +120,7 @@
   </script>
 </body>
 </html>
+
 
 
 
