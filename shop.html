@@ -16,15 +16,11 @@
     </a>
   </div>
 
-  <!-- NEW YEAR BANNER — EXACT TEXT YOU REQUESTED -->
-  <div class="bf-banner" style="background:linear-gradient(90deg,#000000,#1a1a1a,#000000);border-bottom:4px solid #ffd700;box-shadow:0 0 50px #ffd700;">
+  <!-- ORIGINAL ROYAL BANNER (no Christmas) -->
+  <div class="bf-banner">
     <div class="marquee-wrapper">
-      <div class="marquee" style="color:#ffd700;font-family:'Cinzel Decorative',cursive;font-size:3rem;text-shadow:0 0 30px #ffaa00;">
-        🎉 NEW YEAR SALE — +100% MORE CROWNS — JANUARY 1ST TO 3RD ONLY — LARGEST SALE OF THE YEAR 🎉
-      </div>
-      <div class="marquee" style="color:#ffd700;font-family:'Cinzel Decorative',cursive;font-size:3rem;text-shadow:0 0 30px #ffaa00;">
-        🎉 NEW YEAR SALE — +100% MORE CROWNS — JANUARY 1ST TO 3RD ONLY — LARGEST SALE OF THE YEAR 🎉
-      </div>
+      <div class="marquee">BY ORDER OF THE SUPREME COUCH COMMANDER — TRIBUTES NOW ACCEPTED • AFTER EVERY PURCHASE CONTACT COUCHPOTATOGAMES ON DISCORD FOR MANUAL DELIVERY</div>
+      <div class="marquee">BY ORDER OF THE SUPREME COUCH COMMANDER — TRIBUTES NOW ACCEPTED • AFTER EVERY PURCHASE CONTACT COUCHPOTATOGAMES ON DISCORD FOR MANUAL DELIVERY</div>
     </div>
   </div>
 
@@ -37,19 +33,19 @@
       Supreme Couch Commander &amp; Master of Lazy Conquest<br>Commissions forged in the fires of pure potato power
     </p>
 
-    <!-- +100% CROWN PACKS -->
+    <!-- ORIGINAL CROWN PACKS (normal prices & amounts) -->
     <div class="scroll">
-      <h2>New Year Sale Crown Packs (+100% Bonus!)</h2>
+      <h2>Crown Packs</h2>
       <div class="crown-list">
-        <div><span style="text-decoration:line-through red;color:#ff6666;">300</span> → <strong>600 Crowns</strong>     <span>$7.99</span></div>
-        <div><span style="text-decoration:line-through red;color:#ff6666;">500</span> → <strong>1,000 Crowns</strong>     <span>$12.99</span></div>
-        <div><span style="text-decoration:line-through red;color:#ff6666;">1,000</span> → <strong>2,000 Crowns</strong>   <span>$22.99</span></div>
-        <div><span style="text-decoration:line-through red;color:#ff6666;">2,000</span> → <strong>4,000 Crowns</strong>   <span>$44.99</span></div>
-        <div><span style="text-decoration:line-through red;color:#ff6666;">4,500</span> → <strong>9,000 Crowns</strong>   <span>$84.99</span></div>
-        <div><span style="text-decoration:line-through red;color:#ff6666;">7,000</span> → <strong>14,000 Crowns</strong>   <span>$129.99</span></div>
-        <div><span style="text-decoration:line-through red;color:#ff6666;">12,000</span> → <strong>24,000 Crowns</strong>  <span>$199.99</span></div>
+        <div>300 Crowns     <span>$7.99</span></div>
+        <div>500 Crowns     <span>$12.99</span></div>
+        <div>1,000 Crowns   <span>$22.99</span></div>
+        <div>2,000 Crowns   <span>$44.99</span></div>
+        <div>4,500 Crowns   <span>$84.99</span></div>
+        <div>7,000 Crowns   <span>$129.99</span></div>
+        <div>12,000 Crowns  <span>$199.99</span></div>
       </div>
-      <p class="note" style="color:#ffd700;font-size:1.6rem;text-align:center;">Largest sale of the year — January 1st to 3rd only!</p>
+      <p class="note">After payment join Discord and open a ticket with CouchPotatoGames</p>
     </div>
 
     <!-- PAYMENTS -->
@@ -86,15 +82,15 @@
   </div>
 
   <script>
-    // PayPal — +100% bonus
+    // PayPal — back to original prices
     paypal.Buttons({
       style: {shape:'rect',color:'gold',layout:'vertical',label:'paypal'},
       createOrder: (data, actions) => {
-        const prices = {"7.99":"600","12.99":"1,000","22.99":"2,000","44.99":"4,000","84.99":"9,000","129.99":"14,000","199.99":"24,000"};
-        let amount = prompt("NEW YEAR SALE — +100% MORE CROWNS!\n\n$7.99 → 600\n$12.99 → 1,000\n$22.99 → 2,000\n$44.99 → 4,000\n$84.99 → 9,000\n$129.99 → 14,000\n$199.99 → 24,000 Crowns\n\nEnter amount:", "7.99");
+        const prices = {"7.99":"300","12.99":"500","22.99":"1,000","44.99":"2,000","84.99":"4,500","129.99":"7,000","199.99":"12,000"};
+        let amount = prompt("Choose your Crown package:\n\n$7.99 → 300\n$12.99 → 500\n$22.99 → 1,000\n$44.99 → 2,000\n$84.99 → 4,500\n$129.99 → 7,000\n$199.99 → 12,000 Crowns\n\nEnter amount:", "7.99");
         if (!amount) amount = "7.99";
         const clean = parseFloat(amount).toFixed(2);
-        return actions.order.create({purchase_units:[{amount:{value:clean},description:(prices[clean]||"Custom")+" Crowns (New Year Sale)"}]});
+        return actions.order.create({purchase_units:[{amount:{value:clean},description:(prices[clean]||"Custom")+" Crowns"}]});
       },
       onApprove: () => alert("Payment received! Join Discord → open a ticket with CouchPotatoGames to get your crowns!")
     }).render('#paypal-button-container');
@@ -124,6 +120,7 @@
   </script>
 </body>
 </html>
+
 
 
 
