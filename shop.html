@@ -16,15 +16,11 @@
     </a>
   </div>
 
-  <!-- +50% CROWNS SALE BANNER -->
-  <div class="bf-banner" style="background:linear-gradient(90deg,#004d00,#008000,#004d00);border-bottom:4px solid #ffd700;box-shadow:0 0 40px #ff0000;">
+  <!-- ORIGINAL ROYAL BANNER -->
+  <div class="bf-banner">
     <div class="marquee-wrapper">
-      <div class="marquee" style="color:#ff0000;font-family:'Cinzel Decorative',cursive;font-size:2.8rem;text-shadow:0 0 20px #ffd700;">
-        🔥 LIMITED TIME SALE — +50% MORE CROWNS ON ALL PACKS — ENDS MARCH 21ST, 2026 🔥
-      </div>
-      <div class="marquee" style="color:#ff0000;font-family:'Cinzel Decorative',cursive;font-size:2.8rem;text-shadow:0 0 20px #ffd700;">
-        🔥 LIMITED TIME SALE — +50% MORE CROWNS ON ALL PACKS — ENDS MARCH 21ST, 2026 🔥
-      </div>
+      <div class="marquee">BY ORDER OF THE SUPREME COUCH COMMANDER — TRIBUTES NOW ACCEPTED • AFTER EVERY PURCHASE CONTACT COUCHPOTATOGAMES ON DISCORD FOR MANUAL DELIVERY</div>
+      <div class="marquee">BY ORDER OF THE SUPREME COUCH COMMANDER — TRIBUTES NOW ACCEPTED • AFTER EVERY PURCHASE CONTACT COUCHPOTATOGAMES ON DISCORD FOR MANUAL DELIVERY</div>
     </div>
   </div>
 
@@ -37,17 +33,26 @@
       Supreme Couch Commander &amp; Master of Lazy Conquest<br>Commissions forged in the fires of pure potato power
     </p>
 
-    <!-- +50% CROWNS SALE PACKS -->
+    <!-- ORIGINAL CROWN PACKS -->
     <div class="scroll">
-      <h2>Sale Crown Packs (+50% Bonus!)</h2>
+      <h2>Crown Packs</h2>
       <div class="crown-list">
-        <div><span style="text-decoration:line-through red;color:#ff6666;">300</span> → <strong>450 Crowns</strong>     <span>$7.99</span></div>
-        <div><span style="text-decoration:line-through red;color:#ff6666;">500</span> → <strong>750 Crowns</strong>     <span>$12.99</span></div>
-        <div><span style="text-decoration:line-through red;color:#ff6666;">1,000</span> → <strong>1,500 Crowns</strong>   <span>$22.99</span></div>
-        <div><span style="text-decoration:line-through red;color:#ff6666;">2,000</span> → <strong>3,000 Crowns</strong>   <span>$44.99</span></div>
-        <div><span style="text-decoration:line-through red;color:#ff6666;">4,500</span> → <strong>6,750 Crowns</strong>   <span>$84.99</span></div>
-        <div><span style="text-decoration:line-through red;color:#ff6666;">7,000</span> → <strong>10,500 Crowns</strong>   <span>$129.99</span></div>
-        <div><span style="text-decoration:line-through red;color:#ff6666;">12,000</span> → <strong>18,000 Crowns</strong>  <span>$199.99</span></div>
+        <div>300 Crowns     <span>$7.99</span></div>
+        <div>500 Crowns     <span>$12.99</span></div>
+        <div>1,000 Crowns   <span>$22.99</span></div>
+        <div>2,000 Crowns   <span>$44.99</span></div>
+        <div>4,500 Crowns   <span>$84.99</span></div>
+        <div>7,000 Crowns   <span>$129.99</span></div>
+        <div>12,000 Crowns  <span>$199.99</span></div>
+      </div>
+      <p class="note">After payment join Discord and open a ticket with CouchPotatoGames</p>
+    </div>
+
+    <!-- NEW EXTRAS SECTION -->
+    <div class="scroll" style="margin-top:4rem;">
+      <h2>Extras</h2>
+      <div class="crown-list">
+        <div>100 Holy Envoy Cards     <span>$25</span></div>
       </div>
       <p class="note">After payment join Discord and open a ticket with CouchPotatoGames</p>
     </div>
@@ -86,17 +91,17 @@
   </div>
 
   <script>
-    // PayPal — +50% crowns
+    // PayPal — original prices
     paypal.Buttons({
       style: {shape:'rect',color:'gold',layout:'vertical',label:'paypal'},
       createOrder: (data, actions) => {
-        const prices = {"7.99":"450","12.99":"750","22.99":"1,500","44.99":"3,000","84.99":"6,750","129.99":"10,500","199.99":"18,000"};
-        let amount = prompt("LIMITED TIME SALE — +50% MORE CROWNS!\n\n$7.99 → 450\n$12.99 → 750\n$22.99 → 1,500\n$44.99 → 3,000\n$84.99 → 6,750\n$129.99 → 10,500\n$199.99 → 18,000 Crowns\n\nEnter amount:", "7.99");
+        const prices = {"7.99":"300","12.99":"500","22.99":"1,000","44.99":"2,000","84.99":"4,500","129.99":"7,000","199.99":"12,000","25":"100 Holy Envoy Cards"};
+        let amount = prompt("Choose your package:\n\n$7.99 → 300 Crowns\n$12.99 → 500 Crowns\n$22.99 → 1,000 Crowns\n$44.99 → 2,000 Crowns\n$84.99 → 4,500 Crowns\n$129.99 → 7,000 Crowns\n$199.99 → 12,000 Crowns\n$25 → 100 Holy Envoy Cards\n\nEnter amount:", "7.99");
         if (!amount) amount = "7.99";
         const clean = parseFloat(amount).toFixed(2);
-        return actions.order.create({purchase_units:[{amount:{value:clean},description:(prices[clean]||"Custom")+" Crowns (Sale)"}]});
+        return actions.order.create({purchase_units:[{amount:{value:clean},description:(prices[clean]||"Custom")+" Package"}]});
       },
-      onApprove: () => alert("Payment received! Join Discord → open a ticket with CouchPotatoGames to get your crowns!")
+      onApprove: () => alert("Payment received! Join Discord → open a ticket with CouchPotatoGames to get your items!")
     }).render('#paypal-button-container');
 
     // Crypto modal
@@ -124,7 +129,6 @@
   </script>
 </body>
 </html>
-
 
 
 
