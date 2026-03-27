@@ -59,19 +59,24 @@
       <p class="note">After payment join Discord and open a ticket with CouchPotatoGames</p>
     </div>
 
-    <!-- NEW DONATION SECTION -->
+    <!-- DONATION SECTION -->
     <div class="scroll" style="margin-top:4rem;">
       <h2 style="color:#ffd700;">Support the Rise of the Barbarian Kings</h2>
-      <p style="text-align:center;font-size:1.4rem;line-height:1.6;color:#f4e4bc;">
-        Help bring the next major update to life!<br><br>
-        The <strong>Rise of the Barbarian Kings</strong> map is set in the year <strong>395 AD</strong> during the final days of the Western Roman Empire.<br>
+      
+      <p style="text-align:center;font-size:1.55rem;line-height:1.7;color:#f4e4bc;margin:1.5rem 0;">
+        <strong>Help bring the next major update to life!</strong>
+      </p>
+      
+      <p style="text-align:center;font-size:1.45rem;line-height:1.7;color:#f4e4bc;">
+        The <strong>Rise of the Barbarian Kings</strong> map is set in the year <strong>395 AD</strong> during the final days of the Western Roman Empire.<br><br>
         This massive new map will include:<br>
         • New AI systems<br>
         • Brand new quests and storylines<br>
         • New achievements<br>
         • Entirely new game functions and mechanics
       </p>
-      <p style="text-align:center;margin:2rem 0;">
+      
+      <p style="text-align:center;font-size:1.5rem;margin:2rem 0;color:#ffd700;">
         <strong>Any donation helps make this vision a reality.</strong>
       </p>
 
@@ -104,14 +109,14 @@
   </div>
 
   <script>
-    // PayPal for crowns + extras + donations (accepts any amount)
+    // PayPal — original prices + donations
     paypal.Buttons({
       style: {shape:'rect',color:'gold',layout:'vertical',label:'paypal'},
       createOrder: (data, actions) => {
-        let amount = prompt("Enter donation or purchase amount (USD):", "10");
+        let amount = prompt("Enter amount (USD):", "10");
         if (!amount) amount = "10";
         const clean = parseFloat(amount).toFixed(2);
-        return actions.order.create({purchase_units:[{amount:{value:clean},description:"Couch Potato Games Donation / Purchase"}]});
+        return actions.order.create({purchase_units:[{amount:{value:clean},description:"Couch Potato Games - Donation / Purchase"}]});
       },
       onApprove: () => alert("Thank you! Your support helps bring Rise of the Barbarian Kings to life. Please join Discord and open a ticket with CouchPotatoGames.")
     }).render('#paypal-button-container');
@@ -141,7 +146,6 @@
   </script>
 </body>
 </html>
-
 
 
 
