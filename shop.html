@@ -29,7 +29,6 @@
   </div>
 
   <div class="container">
-    <!-- EASTER LOGO -->
     <img src="logo easter.png" alt="Couch Potato Games" class="logo" style="width:100%;max-width:1000px;height:auto;margin:3rem auto 4rem;display:block;filter:drop-shadow(0 0 50px #ffd700);">
 
     <h1>By Royal Decree of the Eternal Spud</h1>
@@ -38,17 +37,17 @@
       Supreme Couch Commander &amp; Master of Lazy Conquest<br>Commissions forged in the fires of pure potato power
     </p>
 
-    <!-- CROWN PACKS -->
+    <!-- +80% CROWNS SALE PACKS -->
     <div class="scroll">
-      <h2>Crown Packs</h2>
+      <h2>Easter Sale Crown Packs (+80% Bonus!)</h2>
       <div class="crown-list">
-        <div>300 Crowns     <span>$7.99</span></div>
-        <div>500 Crowns     <span>$12.99</span></div>
-        <div>1,000 Crowns   <span>$22.99</span></div>
-        <div>2,000 Crowns   <span>$44.99</span></div>
-        <div>4,500 Crowns   <span>$84.99</span></div>
-        <div>7,000 Crowns   <span>$129.99</span></div>
-        <div>12,000 Crowns  <span>$199.99</span></div>
+        <div><span style="text-decoration:line-through red;color:#ff6666;">300</span> → <strong>540 Crowns</strong>     <span>$7.99</span></div>
+        <div><span style="text-decoration:line-through red;color:#ff6666;">500</span> → <strong>900 Crowns</strong>     <span>$12.99</span></div>
+        <div><span style="text-decoration:line-through red;color:#ff6666;">1,000</span> → <strong>1,800 Crowns</strong>   <span>$22.99</span></div>
+        <div><span style="text-decoration:line-through red;color:#ff6666;">2,000</span> → <strong>3,600 Crowns</strong>   <span>$44.99</span></div>
+        <div><span style="text-decoration:line-through red;color:#ff6666;">4,500</span> → <strong>8,100 Crowns</strong>   <span>$84.99</span></div>
+        <div><span style="text-decoration:line-through red;color:#ff6666;">7,000</span> → <strong>12,600 Crowns</strong>   <span>$129.99</span></div>
+        <div><span style="text-decoration:line-through red;color:#ff6666;">12,000</span> → <strong>21,600 Crowns</strong>  <span>$199.99</span></div>
       </div>
       <p class="note">After payment join Discord and open a ticket with CouchPotatoGames</p>
     </div>
@@ -114,16 +113,17 @@
   </div>
 
   <script>
-    // PayPal
+    // PayPal — +80% crowns
     paypal.Buttons({
       style: {shape:'rect',color:'gold',layout:'vertical',label:'paypal'},
       createOrder: (data, actions) => {
-        let amount = prompt("Enter amount (USD):", "10");
-        if (!amount) amount = "10";
+        const prices = {"7.99":"540","12.99":"900","22.99":"1,800","44.99":"3,600","84.99":"8,100","129.99":"12,600","199.99":"21,600"};
+        let amount = prompt("EASTER SALE — +80% MORE CROWNS!\n\n$7.99 → 540\n$12.99 → 900\n$22.99 → 1,800\n$44.99 → 3,600\n$84.99 → 8,100\n$129.99 → 12,600\n$199.99 → 21,600 Crowns\n\nEnter amount:", "7.99");
+        if (!amount) amount = "7.99";
         const clean = parseFloat(amount).toFixed(2);
-        return actions.order.create({purchase_units:[{amount:{value:clean},description:"Couch Potato Games - Donation / Purchase"}]});
+        return actions.order.create({purchase_units:[{amount:{value:clean},description:(prices[clean]||"Custom")+" Crowns (Easter Sale)"}]});
       },
-      onApprove: () => alert("Thank you! Your support helps bring Rise of the Barbarian Kings to life. Please join Discord and open a ticket with CouchPotatoGames.")
+      onApprove: () => alert("Payment received! Join Discord → open a ticket with CouchPotatoGames to get your crowns!")
     }).render('#paypal-button-container');
 
     // Crypto modal
