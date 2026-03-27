@@ -25,7 +25,8 @@
   </div>
 
   <div class="container">
-    <img src="logo.png" alt="Couch Potato Games" class="logo">
+    <!-- NEW EASTER LOGO -->
+    <img src="easter no background.png" alt="Couch Potato Games" class="logo" style="width:100%;max-width:1000px;height:auto;margin:3rem auto 4rem;display:block;filter:drop-shadow(0 0 50px #ffd700);">
 
     <h1>By Royal Decree of the Eternal Spud</h1>
 
@@ -93,7 +94,7 @@
   </div>
 
   <script>
-    // PayPal — original crowns + new extras
+    // PayPal — original prices
     paypal.Buttons({
       style: {shape:'rect',color:'gold',layout:'vertical',label:'paypal'},
       createOrder: (data, actions) => {
@@ -106,7 +107,7 @@
           "129.99": "7,000 Crowns",
           "199.99": "12,000 Crowns",
           "25": "100 Holy Envoy Cards",
-          "5": "10 Expert Carters + 10 Expert Trade Caravans OR 10 Expert Politics"
+          "5": "Expert Carters / Trade Caravans / Politics"
         };
         let amount = prompt("Choose your package:\n\nCrown Packs:\n$7.99 → 300 Crowns\n$12.99 → 500 Crowns\n$22.99 → 1,000 Crowns\n$44.99 → 2,000 Crowns\n$84.99 → 4,500 Crowns\n$129.99 → 7,000 Crowns\n$199.99 → 12,000 Crowns\n\nExtras:\n$25 → 100 Holy Envoy Cards\n$5 → 10 Expert Carters + 10 Expert Trade Caravans\n$5 → 10 Expert Politics\n\nEnter amount:", "7.99");
         if (!amount) amount = "7.99";
@@ -141,7 +142,6 @@
   </script>
 </body>
 </html>
-
 
 
 
