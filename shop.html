@@ -3,88 +3,147 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Store - Couch Potato Games | Rise of the Barbarian Kings</title>
+  <title>Crown Shop | Couch Potato Games</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@900&family=Uncial+Antiqua&family=Almendra+SC&display=swap" rel="stylesheet">
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD&disable-funding=paylater,venmo"></script>
 </head>
 <body>
-  <!-- EASTER EVENT BANNER - UPDATED FOR STORE -->
+  <div style="text-align:center;margin:2rem 0;padding:1rem;background:rgba(0,0,0,0.5);">
+    <a href="/" style="color:#ffd700;font-size:1.6rem;text-decoration:underline;">
+      ← Back to Royal News & Updates
+    </a>
+  </div>
+
+  <!-- EASTER EVENT BANNER - UPDATED -->
   <div class="bf-banner" style="background:linear-gradient(90deg,#4a2c0b,#8b4513,#4a2c0b);border-bottom:4px solid #ffd700;box-shadow:0 0 40px #ff69b4;">
     <div class="marquee-wrapper">
-      <div class="marquee" style="color:#ff69b4;font-family:'Cinzel Decorative',cursive;font-size:2.3rem;text-shadow:0 0 20px #ffd700;">
+      <div class="marquee" style="color:#ff69b4;font-family:'Cinzel Decorative',cursive;font-size:2.6rem;text-shadow:0 0 20px #ffd700;">
         🐰 EASTER EVENT LIVE — +100% MORE CROWNS ON ALL PACKS — ENDS APRIL 4TH, 2026 🐰
       </div>
-      <div class="marquee" style="color:#ff69b4;font-family:'Cinzel Decorative',cursive;font-size:2.3rem;text-shadow:0 0 20px #ffd700;">
+      <div class="marquee" style="color:#ff69b4;font-family:'Cinzel Decorative',cursive;font-size:2.6rem;text-shadow:0 0 20px #ffd700;">
         🐰 EASTER EVENT LIVE — +100% MORE CROWNS ON ALL PACKS — ENDS APRIL 4TH, 2026 🐰
       </div>
     </div>
   </div>
 
-  <div class="container" style="max-width:1100px;">
-    <!-- YOUR EASTER LOGO -->
+  <div class="container">
     <img src="logo easter.png" alt="Couch Potato Games" class="logo" style="width:100%;max-width:1000px;height:auto;margin:3rem auto 4rem;display:block;filter:drop-shadow(0 0 50px #ffd700);">
-   
-    <h1 style="font-size:4.5rem;color:#ffd700;text-align:center;margin:0 0 1rem;letter-spacing:6px;">By Royal Decree of the Eternal Spud</h1>
-   
-    <p style="font-size:1.8rem;color:#f4e4bc;text-align:center;margin:0 0 4rem;font-family:'Uncial Antiqua',cursive;">
+    
+    <h1>By Royal Decree of the Eternal Spud</h1>
+    
+    <p class="tagline">
       Supreme Couch Commander &amp; Master of Lazy Conquest<br>
-      <strong>Easter Event:</strong> +100% Crowns • Max 100 Villages • Banquet x10 • Markets Reset
+      Commissions forged in the fires of pure potato power
     </p>
 
-    <!-- HERO VIDEO -->
-    <div style="margin:3rem auto 4rem;border:8px double #b8860b;box-shadow:0 0 70px rgba(184,134,11,0.9);border-radius:18px;overflow:hidden;position:relative;background:#000;">
-      <video id="promoVideo" style="width:100%;display:block;" autoplay muted loop playsinline preload="auto">
-        <source src="your-promo-video.mp4" type="video/mp4">
-      </video>
-      <button id="soundToggle" style="position:absolute;bottom:18px;right:18px;z-index:10;background:rgba(0,0,0,0.7);border:2px solid #b8860b;width:44px;height:44px;border-radius:50%;cursor:pointer;opacity:0.9;transition:all .3s;display:flex;align-items:center;justify-content:center;">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffd700" stroke-width="2.3">
-          <path d="M11 5L6 9H2v6h4l5 4V5z"/>
-          <path class="mute-slash" d="M1 1l22 22"/>
-        </svg>
-      </button>
-      <div style="background:rgba(0,0,0,0.96);padding:1.6rem;text-align:center;border-top:4px solid #b8860b;">
-        <div style="color:#ff4444;font-family:'Cinzel Decorative',cursive;font-size:2rem;letter-spacing:6px;">RISE OF THE BARBARIAN KINGS</div>
-        <div style="color:#ffd700;font-family:'Cinzel Decorative',cursive;font-size:2.2rem;letter-spacing:5px;text-shadow:0 0 20px #b8860b;margin-top:8px;">Spring 2026</div>
+    <!-- EASTER EVENT CROWN PACKS - UPDATED TO +100% -->
+    <div class="scroll">
+      <h2>Easter Event Crown Packs (+100% Bonus!)</h2>
+      <div class="crown-list">
+        <div><span style="text-decoration:line-through red;color:#ff6666;">300</span> → <strong>600 Crowns</strong> <span>$7.99</span></div>
+        <div><span style="text-decoration:line-through red;color:#ff6666;">500</span> → <strong>1,000 Crowns</strong> <span>$12.99</span></div>
+        <div><span style="text-decoration:line-through red;color:#ff6666;">1,000</span> → <strong>2,000 Crowns</strong> <span>$22.99</span></div>
+        <div><span style="text-decoration:line-through red;color:#ff6666;">2,000</span> → <strong>4,000 Crowns</strong> <span>$44.99</span></div>
+        <div><span style="text-decoration:line-through red;color:#ff6666;">4,500</span> → <strong>9,000 Crowns</strong> <span>$84.99</span></div>
+        <div><span style="text-decoration:line-through red;color:#ff6666;">7,000</span> → <strong>14,000 Crowns</strong> <span>$129.99</span></div>
+        <div><span style="text-decoration:line-through red;color:#ff6666;">12,000</span> → <strong>24,000 Crowns</strong> <span>$199.99</span></div>
+      </div>
+      <p class="note">After payment join Discord and open a ticket with CouchPotatoGames</p>
+    </div>
+
+    <!-- EXTRAS (unchanged) -->
+    <div class="scroll" style="margin-top:4rem;">
+      <h2>Extras</h2>
+      <div class="crown-list">
+        <div>100 Holy Envoy Cards <span>$25</span></div>
+        <div>10 Expert Carters + 10 Expert Trade Caravans <span>$5</span></div>
+        <div>10 Expert Politics <span>$5</span></div>
+      </div>
+      <p class="note">After payment join Discord and open a ticket with CouchPotatoGames</p>
+    </div>
+
+    <!-- DONATION SECTION (unchanged) -->
+    <div class="scroll" style="margin-top:4rem;">
+      <h2 style="color:#ffd700;">Support the Rise of the Barbarian Kings</h2>
+     
+      <p style="text-align:center;font-size:1.55rem;line-height:1.7;color:#f4e4bc;margin:1.5rem 0;">
+        <strong>Help bring the next major update to life!</strong>
+      </p>
+     
+      <p style="text-align:center;font-size:1.45rem;line-height:1.7;color:#f4e4bc;">
+        The <strong>Rise of the Barbarian Kings</strong> map is set in the year <strong>395 AD</strong> during the final days of the Western Roman Empire.<br><br>
+        This massive new map will include:<br>
+        • New AI systems<br>
+        • Brand new quests and storylines<br>
+        • New achievements<br>
+        • Entirely new game functions and mechanics
+      </p>
+     
+      <p style="text-align:center;font-size:1.5rem;margin:2rem 0;color:#ffd700;">
+        <strong>Any donation helps make this vision a reality.</strong>
+      </p>
+      <div class="payments" style="margin-top:2rem;">
+        <div class="btn paypal"><div id="paypal-button-container"></div></div>
+        <div class="crypto-buttons">
+          <button class="btn crypto btc" data-name="Bitcoin (BTC)" data-addr="bc1qprr6p8adykeqcnv8r58qx26fc6lvnrcpz3sumy">Bitcoin (BTC)</button>
+          <button class="btn crypto usdt" data-name="Tether (USDT ERC-20)" data-addr="0x3f1eEdC8339B7828e9c01A95e346bb3179EFe599">Tether (USDT)</button>
+          <button class="btn crypto trx" data-name="TRON (TRX / USDT TRC-20)" data-addr="TDGMkzE8xqQxKVcfRfrdTPywuCxFAatXAb">TRON (TRX)</button>
+        </div>
       </div>
     </div>
 
-    <!-- STORE CONTENT AREA - Add your actual crown packs here -->
-    <div style="margin: 4rem 0; text-align:center;">
-      <h2 style="color:#ffd700; font-size:2.8rem; margin-bottom:2rem;">Crown Packs - Easter Event</h2>
-      <p style="font-size:1.6rem; color:#ff69b4; margin-bottom:3rem;">
-        All crown packs now give <strong>+100% MORE CROWNS</strong> during the event!<br>
-        (Max Villages increased to 100 • Banquet Multiplier x10 • Markets Reset • AI Castles disappear on failed attacks)
-      </p>
-      
-      <!-- Placeholder for your actual store items / payment buttons -->
-      <p style="font-size:1.4rem; color:#f4e4bc;">
-        Your crown pack options will go here.<br>
-        (Add your payment integration or pack cards in this area)
-      </p>
-    </div>
+    <footer>© 2025 Couch Potato Games • All Hail the Eternal Spud • <a href="mailto:contact@couchpotato.games">contact@couchpotato.games</a></footer>
 
-    <!-- BACK TO MAIN BUTTON -->
-    <div style="text-align:center;margin:4rem 0;">
-      <a href="index.html" class="btn discord" style="font-size:2rem;padding:1.2rem 3rem;">← Back to Main Page</a>
+    <!-- MODAL & TOAST -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">×</span>
+        <h3>Copy Address</h3>
+        <p id="crypto-name"></p>
+        <div class="address-box">
+          <input type="text" id="addr" readonly>
+          <button id="copy-btn">Copy</button>
+        </div>
+      </div>
     </div>
-
-    <footer style="margin:4rem 0 2rem;text-align:center;color:#998866;font-family:'Uncial Antiqua',cursive;font-size:1.2rem;">
-      © 2025 Couch Potato Games • All Hail the Eternal Spud •
-      <a href="mailto:contact@couchpotato.games" style="color:#ffd700;">contact@couchpotato.games</a>
-    </footer>
+    <div id="toast">Address copied!</div>
   </div>
 
   <script>
-    // SOUND TOGGLE
-    const video = document.getElementById('promoVideo');
-    const toggleBtn = document.getElementById('soundToggle');
-    const slash = toggleBtn.querySelector('.mute-slash');
-    video.addEventListener('loadeddata', () => video.play().catch(() => {}));
-    toggleBtn.addEventListener('click', () => {
-      video.muted = !video.muted;
-      slash.style.display = video.muted ? 'block' : 'none';
+    // PayPal — Updated for +100% crowns
+    paypal.Buttons({
+      style: {shape:'rect',color:'gold',layout:'vertical',label:'paypal'},
+      createOrder: (data, actions) => {
+        const prices = {"7.99":"600","12.99":"1000","22.99":"2000","44.99":"4000","84.99":"9000","129.99":"14000","199.99":"24000"};
+        let amount = prompt("EASTER EVENT — +100% MORE CROWNS!\n\n$7.99 → 600\n$12.99 → 1,000\n$22.99 → 2,000\n$44.99 → 4,000\n$84.99 → 9,000\n$129.99 → 14,000\n$199.99 → 24,000 Crowns\n\nEnter amount:", "7.99");
+        if (!amount) amount = "7.99";
+        const clean = parseFloat(amount).toFixed(2);
+        return actions.order.create({purchase_units:[{amount:{value:clean},description:(prices[clean]||"Custom")+" Crowns (Easter Event)"}]});
+      },
+      onApprove: () => alert("Payment received! Join Discord → open a ticket with CouchPotatoGames to get your crowns!")
+    }).render('#paypal-button-container');
+
+    // Crypto modal
+    const modal = document.getElementById('modal');
+    const cryptoName = document.getElementById('crypto-name');
+    const addrInput = document.getElementById('addr');
+    const toast = document.getElementById('toast');
+    document.querySelectorAll('.crypto-buttons .btn.crypto').forEach(btn => {
+      btn.addEventListener('click', () => {
+        cryptoName.textContent = btn.dataset.name;
+        addrInput.value = btn.dataset.addr;
+        modal.style.display = 'block';
+      });
     });
-    slash.style.display = 'block';
+    document.querySelector('.close').onclick = () => modal.style.display = 'none';
+    window.onclick = e => { if (e.target === modal) modal.style.display = 'none'; };
+    document.getElementById('copy-btn').onclick = () => {
+      addrInput.select();
+      navigator.clipboard.writeText(addrInput.value);
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2000);
+    };
   </script>
 </body>
 </html>
