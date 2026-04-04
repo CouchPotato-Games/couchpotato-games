@@ -18,11 +18,11 @@
   <!-- EASTER EVENT BANNER - UPDATED -->
   <div class="bf-banner" style="background:linear-gradient(90deg,#4a2c0b,#8b4513,#4a2c0b);border-bottom:4px solid #ffd700;box-shadow:0 0 40px #ff69b4;">
     <div class="marquee-wrapper">
-      <div class="marquee" style="color:#ff69b4;font-family:'Cinzel Decorative',cursive;font-size:2.6rem;text-shadow:0 0 20px #ffd700;">
-        🐰 EASTER EVENT LIVE — +100% MORE CROWNS ON ALL PACKS — ENDS APRIL 4TH, 2026 🐰
+      <div class="marquee" style="color:#ff69b4;font-family:'Cinzel Decorative',cursive;font-size:2.55rem;text-shadow:0 0 20px #ffd700;">
+        🐰 EASTER EVENT LIVE — +300% MORE CROWNS ON ALL PACKS — ENDS SUNDAY APRIL 5TH 🐰
       </div>
-      <div class="marquee" style="color:#ff69b4;font-family:'Cinzel Decorative',cursive;font-size:2.6rem;text-shadow:0 0 20px #ffd700;">
-        🐰 EASTER EVENT LIVE — +100% MORE CROWNS ON ALL PACKS — ENDS APRIL 4TH, 2026 🐰
+      <div class="marquee" style="color:#ff69b4;font-family:'Cinzel Decorative',cursive;font-size:2.55rem;text-shadow:0 0 20px #ffd700;">
+        🐰 EASTER EVENT LIVE — +300% MORE CROWNS ON ALL PACKS — ENDS SUNDAY APRIL 5TH 🐰
       </div>
     </div>
   </div>
@@ -37,22 +37,22 @@
       Commissions forged in the fires of pure potato power
     </p>
 
-    <!-- EASTER EVENT CROWN PACKS - UPDATED TO +100% -->
+    <!-- EASTER EVENT CROWN PACKS - +300% -->
     <div class="scroll">
-      <h2>Easter Event Crown Packs (+100% Bonus!)</h2>
+      <h2>Easter Event Crown Packs (+300% Bonus!)</h2>
       <div class="crown-list">
-        <div><span style="text-decoration:line-through red;color:#ff6666;">300</span> → <strong>600 Crowns</strong> <span>$7.99</span></div>
-        <div><span style="text-decoration:line-through red;color:#ff6666;">500</span> → <strong>1,000 Crowns</strong> <span>$12.99</span></div>
-        <div><span style="text-decoration:line-through red;color:#ff6666;">1,000</span> → <strong>2,000 Crowns</strong> <span>$22.99</span></div>
-        <div><span style="text-decoration:line-through red;color:#ff6666;">2,000</span> → <strong>4,000 Crowns</strong> <span>$44.99</span></div>
-        <div><span style="text-decoration:line-through red;color:#ff6666;">4,500</span> → <strong>9,000 Crowns</strong> <span>$84.99</span></div>
-        <div><span style="text-decoration:line-through red;color:#ff6666;">7,000</span> → <strong>14,000 Crowns</strong> <span>$129.99</span></div>
-        <div><span style="text-decoration:line-through red;color:#ff6666;">12,000</span> → <strong>24,000 Crowns</strong> <span>$199.99</span></div>
+        <div><span style="text-decoration:line-through red;color:#ff6666;">300</span> → <strong>1,200 Crowns</strong> <span>$7.99</span></div>
+        <div><span style="text-decoration:line-through red;color:#ff6666;">500</span> → <strong>2,000 Crowns</strong> <span>$12.99</span></div>
+        <div><span style="text-decoration:line-through red;color:#ff6666;">1,000</span> → <strong>4,000 Crowns</strong> <span>$22.99</span></div>
+        <div><span style="text-decoration:line-through red;color:#ff6666;">2,000</span> → <strong>8,000 Crowns</strong> <span>$44.99</span></div>
+        <div><span style="text-decoration:line-through red;color:#ff6666;">4,500</span> → <strong>18,000 Crowns</strong> <span>$84.99</span></div>
+        <div><span style="text-decoration:line-through red;color:#ff6666;">7,000</span> → <strong>28,000 Crowns</strong> <span>$129.99</span></div>
+        <div><span style="text-decoration:line-through red;color:#ff6666;">12,000</span> → <strong>48,000 Crowns</strong> <span>$199.99</span></div>
       </div>
       <p class="note">After payment join Discord and open a ticket with CouchPotatoGames</p>
     </div>
 
-    <!-- EXTRAS (unchanged) -->
+    <!-- EXTRAS -->
     <div class="scroll" style="margin-top:4rem;">
       <h2>Extras</h2>
       <div class="crown-list">
@@ -63,7 +63,7 @@
       <p class="note">After payment join Discord and open a ticket with CouchPotatoGames</p>
     </div>
 
-    <!-- DONATION SECTION (unchanged) -->
+    <!-- DONATION SECTION -->
     <div class="scroll" style="margin-top:4rem;">
       <h2 style="color:#ffd700;">Support the Rise of the Barbarian Kings</h2>
      
@@ -111,15 +111,23 @@
   </div>
 
   <script>
-    // PayPal — Updated for +100% crowns
+    // PayPal — +300% crowns
     paypal.Buttons({
       style: {shape:'rect',color:'gold',layout:'vertical',label:'paypal'},
       createOrder: (data, actions) => {
-        const prices = {"7.99":"600","12.99":"1000","22.99":"2000","44.99":"4000","84.99":"9000","129.99":"14000","199.99":"24000"};
-        let amount = prompt("EASTER EVENT — +100% MORE CROWNS!\n\n$7.99 → 600\n$12.99 → 1,000\n$22.99 → 2,000\n$44.99 → 4,000\n$84.99 → 9,000\n$129.99 → 14,000\n$199.99 → 24,000 Crowns\n\nEnter amount:", "7.99");
+        const prices = {
+          "7.99": "1200",
+          "12.99": "2000",
+          "22.99": "4000",
+          "44.99": "8000",
+          "84.99": "18000",
+          "129.99": "28000",
+          "199.99": "48000"
+        };
+        let amount = prompt("EASTER EVENT — +300% MORE CROWNS!\n\n$7.99 → 1,200\n$12.99 → 2,000\n$22.99 → 4,000\n$44.99 → 8,000\n$84.99 → 18,000\n$129.99 → 28,000\n$199.99 → 48,000 Crowns\n\nEnter amount:", "7.99");
         if (!amount) amount = "7.99";
         const clean = parseFloat(amount).toFixed(2);
-        return actions.order.create({purchase_units:[{amount:{value:clean},description:(prices[clean]||"Custom")+" Crowns (Easter Event)"}]});
+        return actions.order.create({purchase_units:[{amount:{value:clean},description:(prices[clean]||"Custom")+" Crowns (Easter Event +300%)"}]});
       },
       onApprove: () => alert("Payment received! Join Discord → open a ticket with CouchPotatoGames to get your crowns!")
     }).render('#paypal-button-container');
